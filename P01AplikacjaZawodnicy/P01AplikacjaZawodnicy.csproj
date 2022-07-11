@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="P04AplikacjaZawodnicy.Core">
+      <HintPath>..\..\Dzien8\P04AplikacjaZawodnicy.Core\bin\Debug\P04AplikacjaZawodnicy.Core.dll</HintPath>
+    </Reference>
     <Reference Include="P04BibliotekaPolaczenieZBaza">
       <HintPath>..\..\Dzien5\P04BibliotekaPolaczenieZBaza\bin\Debug\P04BibliotekaPolaczenieZBaza.dll</HintPath>
     </Reference>
@@ -77,17 +80,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\ModelBazyDanych.cs">
-      <DependentUpon>ModelBazyDanych.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Repositories\ModelBazyDanych.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBazyDanych.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Repositories\ZawodnicyRepository.cs" />
-    <Compile Include="Tools\PDFManager.cs" />
-    <Compile Include="ViewModels\ZawodnicyResultVM.cs" />
     <EmbeddedResource Include="FrmZawodnicy.resx">
       <DependentUpon>FrmZawodnicy.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,14 +114,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Repositories\ModelBazyDanych.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>ModelBazyDanych.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Repositories\ModelBazyDanych.dbml.layout">
-      <DependentUpon>ModelBazyDanych.dbml</DependentUpon>
-    </None>
     <None Include="Resources\arrowLeft.png" />
   </ItemGroup>
   <ItemGroup>
@@ -141,8 +125,6 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Domain\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

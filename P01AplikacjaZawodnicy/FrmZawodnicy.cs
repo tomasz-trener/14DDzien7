@@ -1,16 +1,11 @@
-﻿
-using P01AplikacjaZawodnicy.Repositories;
-using P01AplikacjaZawodnicy.Tools;
-using P01AplikacjaZawodnicy.ViewModels;
+﻿using P01AplikacjaZawodnicy.Tools;
+using P04AplikacjaZawodnicy.Core.Repositories;
+using P04AplikacjaZawodnicy.Core.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace P01AplikacjaZawodnicy
