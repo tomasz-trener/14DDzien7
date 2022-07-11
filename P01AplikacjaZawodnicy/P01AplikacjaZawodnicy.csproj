@@ -36,6 +36,12 @@
     <Reference Include="P04BibliotekaPolaczenieZBaza">
       <HintPath>..\..\Dzien5\P04BibliotekaPolaczenieZBaza\bin\Debug\P04BibliotekaPolaczenieZBaza.dll</HintPath>
     </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -80,6 +86,7 @@
       <DependentUpon>ModelBazyDanych.dbml</DependentUpon>
     </Compile>
     <Compile Include="Repositories\ZawodnicyRepository.cs" />
+    <Compile Include="Tools\PDFManager.cs" />
     <Compile Include="ViewModels\ZawodnicyResultVM.cs" />
     <EmbeddedResource Include="FrmZawodnicy.resx">
       <DependentUpon>FrmZawodnicy.cs</DependentUpon>
@@ -100,6 +107,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

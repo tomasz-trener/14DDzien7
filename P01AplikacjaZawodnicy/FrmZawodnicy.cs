@@ -1,5 +1,6 @@
 ﻿
 using P01AplikacjaZawodnicy.Repositories;
+using P01AplikacjaZawodnicy.Tools;
 using P01AplikacjaZawodnicy.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -122,6 +123,28 @@ namespace P01AplikacjaZawodnicy
         {
             txtStrona.Text = Convert.ToString(Convert.ToInt32(txtStrona.Text) + 1);
             Szukaj();
+        }
+
+        private void btnGenerujPDF_Click(object sender, EventArgs e)
+        {
+            PDFManager pdfm = new PDFManager();
+
+            //List<Zawodnik> zawodnicy = new List<Zawodnik>();
+            //foreach (var item in lvDane.Items)
+            //    zawodnicy.Add((Zawodnik)((ListViewItem)item).Tag);
+
+            // można proście używajac linq 
+            var zawodnicy = lvDane.Items.Cast<ListViewItem>().Select(x => (Zawodnik)x.Tag).ToArray();
+       
+
+            string nazwaPliku =  pdfm.StworzPdf(zawodnicy);
+
+            //string sciezkaDoFolderu = @"C:\Users\kurs\source\repos\Dzien7\P01AplikacjaZawodnicy\bin\Debug";
+
+            string sciezkaDoExe = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string sciezkaDoFolderu = System.IO.Path.GetDirectoryName(sciezkaDoExe);
+
+            wbRaport.Navigate(sciezkaDoFolderu + $"\\{nazwaPliku}");
         }
     }
 }

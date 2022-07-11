@@ -38,6 +38,8 @@
             this.pbStronaLewo = new System.Windows.Forms.PictureBox();
             this.lblLiczbaStron = new System.Windows.Forms.Label();
             this.lvDane = new System.Windows.Forms.ListView();
+            this.wbRaport = new System.Windows.Forms.WebBrowser();
+            this.btnGenerujPDF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbStronaPrawo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStronaLewo)).BeginInit();
             this.SuspendLayout();
@@ -140,11 +142,31 @@
             this.lvDane.TabIndex = 12;
             this.lvDane.UseCompatibleStateImageBehavior = false;
             // 
+            // wbRaport
+            // 
+            this.wbRaport.Location = new System.Drawing.Point(255, 70);
+            this.wbRaport.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbRaport.Name = "wbRaport";
+            this.wbRaport.Size = new System.Drawing.Size(258, 258);
+            this.wbRaport.TabIndex = 13;
+            // 
+            // btnGenerujPDF
+            // 
+            this.btnGenerujPDF.Location = new System.Drawing.Point(438, 39);
+            this.btnGenerujPDF.Name = "btnGenerujPDF";
+            this.btnGenerujPDF.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerujPDF.TabIndex = 14;
+            this.btnGenerujPDF.Text = "PDF";
+            this.btnGenerujPDF.UseVisualStyleBackColor = true;
+            this.btnGenerujPDF.Click += new System.EventHandler(this.btnGenerujPDF_Click);
+            // 
             // FrmZawodnicy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 375);
+            this.ClientSize = new System.Drawing.Size(530, 375);
+            this.Controls.Add(this.btnGenerujPDF);
+            this.Controls.Add(this.wbRaport);
             this.Controls.Add(this.lvDane);
             this.Controls.Add(this.lblLiczbaStron);
             this.Controls.Add(this.pbStronaPrawo);
@@ -175,6 +197,8 @@
         private System.Windows.Forms.PictureBox pbStronaPrawo;
         private System.Windows.Forms.Label lblLiczbaStron;
         private System.Windows.Forms.ListView lvDane;
+        private System.Windows.Forms.WebBrowser wbRaport;
+        private System.Windows.Forms.Button btnGenerujPDF;
     }
 }
 
